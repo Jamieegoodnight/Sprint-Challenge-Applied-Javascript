@@ -1,6 +1,27 @@
 
 
 // Initial commit!
+// --------------
+// README QUESTIONS
+
+// 1. What is the DOM?
+// The Document Object Model is an Applied Programming Interface, it's a representation of the codebase on the user's broswer. 
+
+// 2. What is an event
+// Any action the user takes within the DOM.
+
+// 3. What is an event listener?
+// A trigger that responds to an event in a particular way. 
+
+// 4. Why would we convert a NodeList into an Array?
+// To manipulate individual elements in that array, such as adding event listeners. 
+
+// 5. What is a component?
+// Modular code. 
+
+
+
+
 
 
 
