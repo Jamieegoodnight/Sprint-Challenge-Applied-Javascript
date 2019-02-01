@@ -14,7 +14,7 @@
 // A trigger that responds to an event in a particular way. 
 
 // 4. Why would we convert a NodeList into an Array?
-// To manipulate individual elements in that array, such as adding event listeners. 
+// To use array methods to manipulate individual elements in that array, such as adding event listeners. 
 
 // 5. What is a component?
 // Modular code. 
@@ -43,20 +43,20 @@ class TabLink {
     // We need to find out if a user clicked 'all' cards or a specific category.  Follow the instructions below to accomplish this task:    
     
     // Check to see if this.tabData is equal to 'all'
-    if(this.tabData===this.tabElement.querySelector(`.tab[data-tab='all']`)){
+    if(this.tabData==='all'){
       // If `all` is true, select all cards regardless of their data attribute values
       // this.cards = ;
        this.cards=document.querySelectorAll('.card');
     } else {
       // else if `all` is false, only select the cards with matching this.tabData values
       // this.cards = ;
-       this.cards=document.querySelectorAll(`.card[data-tab:'${this.tabData}']`);
+       this.cards=document.querySelectorAll(`.card[data-tab='${this.tabData}']`);
     }
     
 
      // Map over the newly converted NodeList we just created in our if statement above. Convert each this.cards element into a new instance of the TabCard class. Pass in a card object to the TabCard class. 
     // this.cards = Array.from(this.cards).map();
-       this.cards.forEach(x => new TabCard(x));
+       this.cards=Array.from(this.cards).map(x => new TabCard(x));
 
     // Add a click event that invokes this.selectTab
     // this.tabElement.addEventListener();
@@ -84,7 +84,7 @@ class TabLink {
     this.tabElement.classList.add('active-tab');
   
     // Notice we are looping through the this.cards array and invoking selectCard() from the TabCard class. Just un-comment the code and study what is happening here.
-    // this.cards.forEach(card => card.selectCard());
+    this.cards.forEach(card => card.selectCard());
   }
 }
 
